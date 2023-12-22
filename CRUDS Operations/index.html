@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUDS Operations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="crud"><!-- Start cruds -->
+        <div class="head"><!-- head -->
+            <h2>crud</h2>
+            <p>product mangment system </p>
+        </div>
+        <div class="inputs"><!--inputs -->
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup=getTotal() "number" id="price" placeholder="price">
+                <input onkeyup=getTotal() "number" id="taxs" placeholder="taxs">
+                <input onkeyup=getTotal() "number" id="ads" placeholder="ads">
+                <input onkeyup=getTotal() "number" id="discount" placeholder="discount">
+                <small id="total">3231</small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="categroy" placeholder="categroy">
+            <button id="submit">creat</button>
+        </div>
+        <div class="outpus"><!-- outputs-->
+            <div class="search-block">
+                <input onkeyup="searchData(this.value)" type="search" id="search" placeholder="search">
+                <div class="but-search">
+                    <button onclick="getSearchMood(this.id)" id="search-title">search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="search-category">search by category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div><!-- to make adelete button with java script -->
+            <table id="tbody">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>ubdate</th>
+                    <th>delete</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>samsung</td>
+                        <td>20000</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>2100</td>
+                        <td>phone</td>
+                        <td><button id="ubdate">ubdate</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div><!-- end cruds -->
+
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
